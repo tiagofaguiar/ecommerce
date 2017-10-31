@@ -18,7 +18,7 @@ class User extends Model {
 
 		if(count($results) === 0)
 		{
-			throw new \Exception("Usuário inexistente ou se nha inválida.", 1);
+			throw new \Exception("Usuário inexistente ou senha inválida.");
 		}
 
 		$data = $results[0];
@@ -56,8 +56,10 @@ class User extends Model {
 
 			){
                  header("Location: /admin/login");
-                 exit;
-		}
+            
+		      exit; }
+
+		
 	}
 	           public static function logout()
 	           {
